@@ -16,7 +16,7 @@ async function deleteRemote (rname, scope = 'local') {
     var cfg = await getConfig(scope)
     Object.keys(cfg).filter(l => l.startsWith('remote')).forEach(l => delete cfg[l])
     await writeConfig(cfg, scope)
-    fs.rimraf(path.join(await getGitDir(await getConfigPath(scope)), 'refs', 'remotes'))
+    return fs.rimraf(path.join(await getGitDir(await getConfigPath(scope)), 'refs', 'remotes'))
   }
 }
 
