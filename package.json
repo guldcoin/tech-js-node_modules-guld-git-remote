@@ -1,7 +1,7 @@
 {
   "name": "guld-git-remote",
   "version": "1.0.0",
-  "description": "Guld tool for getting the git directory of a path.",
+  "description": "Guld tool for managing git remotes.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/_mocha",
