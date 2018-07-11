@@ -16,11 +16,11 @@
   "author": "isysd",
   "license": "MIT",
   "dependencies": {
-    "guld-fs": "^1.2.11",
-    "guld-git-config": "^1.2.8",
-    "guld-git-host": "^0.4.10",
-    "guld-git-path": "^1.0.9",
-    "guld-user": "^0.5.6",
+    "guld-fs": "^1.2.12",
+    "guld-git-config": "^1.2.9",
+    "guld-git-host": "^0.4.11",
+    "guld-git-path": "^1.0.10",
+    "guld-user": "^0.5.7",
     "lodash.union": "^4.6.0"
   },
   "devDependencies": {
