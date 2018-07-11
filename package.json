@@ -1,6 +1,6 @@
 {
   "name": "guld-git-remote",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Guld tool for managing git remotes.",
   "main": "index.js",
   "scripts": {
@@ -16,11 +16,11 @@
   "author": "isysd",
   "license": "MIT",
   "dependencies": {
-    "guld-fs": "^1.2.8",
-    "guld-git-config": "^1.2.5",
-    "guld-git-host": "^0.4.7",
-    "guld-git-path": "^1.0.7",
-    "guld-user": "^0.5.5",
+    "guld-fs": "^1.2.9",
+    "guld-git-config": "^1.2.6",
+    "guld-git-host": "^0.4.8",
+    "guld-git-path": "^1.0.8",
+    "guld-user": "^0.5.6",
     "lodash.union": "^4.6.0"
   },
   "devDependencies": {
