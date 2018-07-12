@@ -1,6 +1,6 @@
 {
   "name": "guld-git-remote",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Guld tool for managing git remotes.",
   "main": "index.js",
   "scripts": {
