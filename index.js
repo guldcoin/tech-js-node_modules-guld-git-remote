@@ -29,7 +29,7 @@ async function addRemote (rname, slug, rurl, protocol = 'https', scope = 'local'
       remote[`remote "${rname}"`].pushurl = remote[`remote "${rname}"`].pushurl || []
       var allr = _union([cfg[`remote "${rname}"`].url, ...cfg[`remote "${rname}"`].pushurl],
         [remote[`remote "${rname}"`].url, ...remote[`remote "${rname}"`].pushurl])
-      remote[`remote "${rname}"`].url = allr.shift()
+      remote[`remote "${rname}"`].url = allr[0]
       remote[`remote "${rname}"`].pushurl = allr
     }
     cfg[`remote "${rname}"`] = remote[`remote "${rname}"`]
@@ -53,8 +53,9 @@ async function createRemote (rname, slug, rurl, protocol = 'https') {
   if (Array.isArray(urls)) {
     var url = urls.shift()
     remote[`remote "${rname}"`]['url'] = url
+    remote[`remote "${rname}"`]['pushurl'] = [url]
     if (urls.length > 0) {
-      remote[`remote "${rname}"`]['pushurl'] = []
+      // remote[`remote "${rname}"`]['pushurl'] = []
       urls.forEach(u => {
         remote[`remote "${rname}"`]['pushurl'].push(u)
       })
