@@ -42,7 +42,7 @@ describe('get-git-remote', function () {
     assert.equal(cfg[`remote "isysd"`].fetch, '+refs/heads/*:refs/remotes/isysd/*')
     assert.equal(cfg[`remote "isysd"`].url, 'https://bitbucket.org/isysd/tech-js-node_modules-guld-git-remote.git')
     assert.equal(cfg[`remote "isysd"`].pushurl[0], 'https://bitbucket.org/isysd/tech-js-node_modules-guld-git-remote.git')
-    assert.equal(cfg[`remote "isysd"`].pushurl[1], 'https://github.com/isysd/tech-js-node_modules-guld-git-remote.git')
+    assert.equal(cfg[`remote "isysd"`].pushurl[1], 'https://github.com/isysd-mirror/tech-js-node_modules-guld-git-remote.git')
     assert.equal(cfg[`remote "isysd"`].pushurl[2], 'https://gitlab.com/isysd/tech-js-node_modules-guld-git-remote.git')
   })
   it('deleteRemote all', async function () {
