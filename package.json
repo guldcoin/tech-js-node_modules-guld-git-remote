@@ -6,7 +6,9 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/_mocha",
     "lint": "eslint --env browser *.js*",
-    "fix": "eslint --fix *.js*"
+    "fix": "eslint --fix *.js*",
+    "test:lint": "npm run lint && npm run test",
+    "build": "webpack"
   },
   "keywords": [
     "guld",
@@ -36,7 +38,10 @@
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-standard": "^4.0.0",
     "mocha": "^5.2.0",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "webpack": "^0.0.1",
+    "mochify": "^0.0.1",
+    "puppeteer": "^0.0.1"
   },
   "pre-commit": [
     "lint",
@@ -46,6 +51,10 @@
   "engines": {
     "node": ">=7"
   },
-  "homepage": "https://bitbucket.org/isysd/tech-js-node_modules-guld-git-remote#readme",
-  "repository": "git@bitbucket.org:isysd/tech-js-node_modules-guld-git-remote.git"
+  "homepage": "https://guld.tech/lib/guld-git-remote.html",
+  "repository": "https://bitbucket.org/guld/tech-js-node_modules-guld-git-remote",
+  "browser": "guld-git-remote.min.js",
+  "eslintIgnore": [
+    "*.min.js"
+  ]
 }
