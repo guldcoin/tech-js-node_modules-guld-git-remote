@@ -20,7 +20,7 @@ async function deleteRemote (rname, scope = 'local') {
   }
 }
 
-async function addRemote (rname, slug, rurl, protocol = 'https', scope = 'local') {
+async function addRemote (rname, slug, rurl, protocol = 'ssh', scope = 'local') {
   var cfg = await getConfig(scope)
   async function addRname (rname) {
     var remote = await createRemote(rname, slug, rurl, protocol)
@@ -44,7 +44,7 @@ async function addRemote (rname, slug, rurl, protocol = 'https', scope = 'local'
   return writeConfig(cfg, scope)
 }
 
-async function createRemote (rname, slug, rurl, protocol = 'https') {
+async function createRemote (rname, slug, rurl, protocol = 'ssh') {
   var remote = {}
   remote[`remote "${rname}"`] = {
     fetch: `+refs/heads/*:refs/remotes/${rname}/*`
